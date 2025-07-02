@@ -76,7 +76,7 @@ const Hero = () => {
             </button>
 
             <a
-              href="/doc2.pdf"
+              href="cv.pdf"
               download
               className="px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white rounded-full font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300 hover:scale-105 flex items-center gap-2"
             >

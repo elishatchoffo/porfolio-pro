@@ -10,8 +10,8 @@ const Skills = () => {
       skills: [
         { name: "React", level: 60 },
         { name: "HTML", level: 90 },
-        { name: "CSS", level: 80 },
-        { name: "JavaScript", level: 60 },
+        { name: "CSS", level: 70 },
+        { name: "JavaScript", level: 40 },
         
       ]
     },
@@ -27,52 +27,52 @@ const Skills = () => {
       ]
     },
     {
-      title: "Design & UI/UX",
+      title: "Design ",
       icon: <Palette className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
       skills: [
-        { name: "Photoshop", level: 50 },
+        { name: "Photoshop", level: 40 },
        
 
       ]
     },
     {
-      title: "DevOps & Outils",
+      title: "Outils ",
       icon: <Zap className="w-8 h-8" />,
       color: "from-orange-500 to-red-500",
       skills: [
-        { name: "Git", level: 50 },
+        { name: "Git", level: 40 },
        
       ]
     }
   ];
 
-  const achievements = [
-    {
-      icon: <Globe className="w-8 h-8" />,
-      number: "50+",
-      label: "Projets réalisés",
-      color: "from-blue-500 to-blue-600"
-    },
-    // {
-    //   icon: <Code className="w-8 h-8" />,
-    //   number: "1+",
-    //   label: "Années d'expérience",
-    //   color: "from-purple-500 to-purple-600"
-    // },
-    {
-      icon: <Smartphone className="w-8 h-8" />,
-      number: "100%",
-      label: "Satisfaction client",
-      color: "from-green-500 to-green-600"
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      number: "24/7",
-      label: "Support disponible",
-      color: "from-orange-500 to-orange-600"
-    }
-  ];
+   const achievements = [
+  //   // {
+  //   //   icon: <Globe className="w-8 h-8" />,
+  //   //   number: "50+",
+  //   //   label: "Projets réalisés",
+  //   //   color: "from-blue-500 to-blue-600"
+  //   // },
+  //   // {
+  //   //   icon: <Code className="w-8 h-8" />,
+  //   //   number: "1+",
+  //   //   label: "Années d'expérience",
+  //   //   color: "from-purple-500 to-purple-600"
+  //   // },
+  //   // {
+  //   //   icon: <Smartphone className="w-8 h-8" />,
+  //   //   number: "100%",
+  //   //   label: "Satisfaction client",
+  //   //   color: "from-green-500 to-green-600"
+  //   // },
+  //   {
+  //     icon: <Zap className="w-8 h-8" />,
+  //     number: "24/7",
+  //     label: "Support disponible",
+  //     color: "from-orange-500 to-orange-600"
+  //   }
+   ];
 
   return (
     <section id="competences" className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-500">

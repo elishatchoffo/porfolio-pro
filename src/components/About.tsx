@@ -76,7 +76,7 @@ const About = () => {
               </p>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-6 mb-8">
+              {/* <div className="grid grid-cols-3 gap-6 mb-8">
                 <div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-xl">
                   <div className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-1">50+</div>
                   <div className="text-sm text-gray-600 dark:text-gray-400">Projets</div>
@@ -86,11 +86,11 @@ const About = () => {
                   <div className="text-2xl font-bold text-green-600 dark:text-green-400 mb-1">100%</div>
                   <div className="text-sm text-gray-600 dark:text-gray-400">Satisfaction</div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Download CV Button */}
               <a
-                href="/doc2.pdf"
+                href="cv.pdf"
                 className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-blue-500/25 relative overflow-hidden"
               >
                 <span className="relative z-10">Télécharger mon CV</span>

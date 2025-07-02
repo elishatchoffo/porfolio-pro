@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, MessageCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
     message: ''
   });
 
@@ -13,26 +13,43 @@ const Contact = () => {
   const [isSuccess, setIsSuccess] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simuler l'envoi du formulaire
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSuccess(true);
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    setIsSubmitting(false);
-    
-    setTimeout(() => setIsSuccess(false), 5000);
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  const templateParams = {
+    name: formData.name,
+    email: formData.email,
+    message: formData.message
   };
+
+  try {
+    const result = await emailjs.send(
+      'service_bralpxr',        // Remplace par ton service ID
+      'template_b0c8qh6',       // Remplace par ton template ID
+      templateParams,
+      'BzNLofHiLc_4R-m_p'       // Remplace par ta clé publique
+    );
+    
+    console.log(result.text);
+    setIsSuccess(true);
+    setFormData({ name: '', email: '', message: '' });
+
+    // setTimeout(() => setIsSuccess(false), 5000);
+  } catch (error) {
+    console.error(error);
+    alert("❌ Une erreur est survenue lors de l'envoi.");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
   const contactInfo = [
     {
@@ -190,22 +207,6 @@ const Contact = () => {
                         placeholder="votre@email.com"
                       />
                     </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">
-                      Sujet *
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-4 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white dark:bg-gray-700 text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
-                      placeholder="Sujet de votre message"
-                    />
                   </div>
 
                   <div>
