@@ -31,7 +31,7 @@ const About = () => {
   ];
 
   const tools = [
-    "React", "HTML", "CSS", "JavaScript", "php", "Bootstrap",
+    "React", "HTML", "CSS", "JavaScript", "php", "Bootstrap", 
   ];
 
   return (

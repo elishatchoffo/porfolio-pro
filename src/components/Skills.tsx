@@ -9,8 +9,8 @@ const Skills = () => {
       color: "from-blue-500 to-cyan-500",
       skills: [
         { name: "React", level: 60 },
-        { name: "HTML", level: 60 },
-        { name: "CSS", level: 50 },
+        { name: "HTML", level: 90 },
+        { name: "CSS", level: 80 },
         { name: "JavaScript", level: 60 },
         
       ]
@@ -20,9 +20,10 @@ const Skills = () => {
       icon: <Database className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500",
       skills: [
-        { name: "php", level: 90 },
+        { name: "php", level: 80 },
         { name: "xampp", level: 85 },
-        
+        { name: "supabase", level: 40 },
+         { name: "notejs", level: 35 },
       ]
     },
     {
@@ -31,6 +32,7 @@ const Skills = () => {
       color: "from-purple-500 to-pink-500",
       skills: [
         { name: "Photoshop", level: 50 },
+       
 
       ]
     },
@@ -39,7 +41,7 @@ const Skills = () => {
       icon: <Zap className="w-8 h-8" />,
       color: "from-orange-500 to-red-500",
       skills: [
-        { name: "Git", level: 60 },
+        { name: "Git", level: 50 },
        
       ]
     }
